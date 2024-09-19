@@ -404,12 +404,6 @@ I already started writing the [**Wiki**](https://github.com/gh0stzk/dotfiles/wik
 
 </details>
 
-## Firefox Theme (z0mbi3 Fox)
-
-|<img src="https://github.com/gh0stzk/dotfiles/assets/67278339/9b956d3d-fc7b-49ca-b27f-dc6aa83d9e2f" alt="Firefox theme - z0mbi3-Fox" width="700">|
-|:-:|
-Complementarily you can install [this extension](https://github.com/PonyLucky/gh0stzk-Firefox/tree/master/extension) made by [PonyLucky](https://github.com/PonyLucky). It is a startpage to enhance UX. [Preview and configuration options](https://github.com/PonyLucky/gh0stzk-Firefox/tree/master/extension). Looks awesome with the firefox theme.
-
 ## Neovim Setup
 
 |<img src="https://github.com/gh0stzk/dotfiles/assets/67278339/17a1eb30-437e-4bf2-980c-6a410eff76bb" alt="Neovim configuration" width="700">|
@@ -435,17 +429,19 @@ And more.. You need to look sxhkdrc file for more, or press F1 for a cheatsheet.
 ## 📦 setup
 
 ### 💾 Installation:
-The installer only works for **ARCH** Linux, and based distros.
+The installer only works for **Debian** Linux, and based distros.
 
 <b>Open a terminal in HOME</b>
-- **First download the installer**
+
+- **First clone the repository**
 ```sh
-curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/RiceInstaller -o $HOME/RiceInstaller
-
-# Maybe you want a short url??
-
-curl -L https://is.gd/gh0stzk_dotfiles -o $HOME/RiceInstaller
+git clone https://github.com/Obrn544/gh0stzk-dotfiles-ubuntu.git
 ```
+- **cd into the directory**
+```sh
+cd gh0stzk-dotfiles-ubuntu
+```
+
 - **Now give it execute permissions**
 ```sh
 chmod +x RiceInstaller
