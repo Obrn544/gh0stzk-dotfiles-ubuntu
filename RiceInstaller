@@ -111,46 +111,6 @@ if [ ! -e "$HOME/.config/user-dirs.dirs" ]; then
     xdg-user-dirs-update
 fi
 
-########## ---------- Cloning the Rice! ---------- ##########
-
-logo "Downloading dotfiles"
-
-repo_url="https://github.com/Obrn544/gh0stzk-dotfiles-ubuntu.git"
-repo_dir="$HOME/dotfiles"
-
-# Verifies if the folder of the repository exists, and if it does, deletes it
-if [ -d "$repo_dir" ]; then
-    printf "Removing existing dotfiles repository\n"
-    rm -rf "$repo_dir"
-fi
-
-# Clone the repository
-printf "Cloning dotfiles from %s\n" "$repo_url"
-git clone --depth=1 "$repo_url" "$repo_dir"
-sleep 2
-clear
-
-########## ---------- Cloning the zsh plugins! ---------- ##########
-
-logo "Download zsh plugins"
-
-repo_url="https://github.com/zsh-users/zsh-autosuggestions"
-repo_dir="$HOME/.config/zsh"
-
-git clone "$repo_url" "$repo_dir"
-#sleep 2
-
-repo_url="https://github.com/zsh-users/zsh-syntax-highlighting.git"
-
-git clone "$repo_url" "$repo_dir"
-#sleep 2
-
-repo_url="git clone https://github.com/zsh-users/zsh-history-substring-search"
-
-git clone "$repo_url" "$repo_dir"
-sleep 2
-clear
-
 ########## ---------- Backup files ---------- ##########
 
 logo "Backup files"
@@ -259,6 +219,48 @@ fi
 
 printf "\n\n%s%sFiles copied succesfully!!%s\n" "${BLD}" "${CGR}" "${CNC}"
 sleep 5
+
+########## ---------- Cloning the zsh plugins! ---------- ##########
+
+logo "Download zsh plugins"
+
+repo_url="https://github.com/zsh-users/zsh-autosuggestions"
+repo_dir="$HOME/.config/zsh"
+
+printf "Cloning dotfiles from %s\n" "$repo_url"
+git clone "$repo_url" "$repo_dir"
+#sleep 2
+
+repo_url="https://github.com/zsh-users/zsh-syntax-highlighting.git"
+
+printf "Cloning dotfiles from %s\n" "$repo_url"
+git clone "$repo_url" "$repo_dir"
+#sleep 2
+
+repo_url="git clone https://github.com/zsh-users/zsh-history-substring-search"
+
+printf "Cloning dotfiles from %s\n" "$repo_url"
+git clone "$repo_url" "$repo_dir"
+
+sleep 2
+clear
+
+########## ---------- Download pokemon-colorscripts! ---------- ##########
+
+logo "Download pokemon-colorscripts"
+
+repo_url="https://gitlab.com/phoneybadger/pokemon-colorscripts.git"
+repo_dir="$HOME/Documents"
+
+git clone "$repo_url" "$repo_dir"
+
+cd Documents/pokemon-colorscripts
+sudo ./install.sh
+
+cd
+
+sleep 2
+clear
 
 ########## ---------- Installing Paru & others ---------- ##########
 
