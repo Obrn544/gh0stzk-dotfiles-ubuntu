@@ -77,22 +77,19 @@ clear
 
 logo "Installing needed packages.."
 
-dependencias=(alacritty base-devel bat brightnessctl bspwm dunst eza feh gvfs-mtp firefox geany git kitty imagemagick jq \
-			        jgmenu libwebp maim mpc mpd neovim ncmpcpp npm pamixer pacman-contrib \
-			        papirus-icon-theme physlock picom playerctl polybar polkit-gnome python-gobject ranger \
-			        redshift rofi rustup sxhkd tmux ttf-inconsolata ttf-jetbrains-mono ttf-jetbrains-mono-nerd \
-			        ttf-joypixels ttf-terminus-nerd ueberzug webp-pixbuf-loader xclip xdg-user-dirs \
-			        xdo xdotool xorg-xdpyinfo xorg-xkill xorg-xprop xorg-xrandr xorg-xsetroot \
-			        xorg-xwininfo zsh zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting)
+dependencias=(alacritty  bat brightnessctl bspwm dunst eza feh  firefox geany git kitty imagemagick jq \
+			        jgmenu  maim mpc mpd neovim ncmpcpp npm pamixer papirus-icon-theme physlock picom playerctl / 
+                    polybar  python-gobject ranger redshift rofi rustup sxhkd tmux  ueberzug webp-pixbuf-loader / 
+                    xclip xdg-user-dirs xdo xdotool zsh zsh-autosuggestions  zsh-syntax-highlighting)
 
 is_installed() {
-    pacman -Q "$1" &> /dev/null
+    apt list --installed 2>/dev/null | grep "^$1$" >/dev/null
 }
 
 printf "%s%sChecking for required packages...%s\n" "${BLD}" "${CBL}" "${CNC}"
 for paquete in "${dependencias[@]}"; do
     if ! is_installed "$paquete"; then
-        if sudo pacman -S "$paquete" --noconfirm >/dev/null 2>> RiceError.log; then
+        if sudo apt install "$paquete" --noconfirm >/dev/null 2>> RiceError.log; then
             printf "%s%s%s %shas been installed succesfully.%s\n" "${BLD}" "${CYE}" "$paquete" "${CBL}" "${CNC}"
             sleep 1
         else
@@ -118,7 +115,7 @@ fi
 
 logo "Downloading dotfiles"
 
-repo_url="https://github.com/gh0stzk/dotfiles"
+repo_url="https://github.com/Obrn544/gh0stzk-dotfiles-ubuntu.git"
 repo_dir="$HOME/dotfiles"
 
 # Verifies if the folder of the repository exists, and if it does, deletes it
