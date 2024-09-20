@@ -19,12 +19,12 @@
 
 
 # Verifies if xdpyinfo and imagemagick are installed
-for app in xorg-xdpyinfo imagemagick; do
-    if ! pacman -Qq $app > /dev/null 2>&1; then
-        dunstify "Missing package" "Please install the $app package to continue" -u critical
-        exit 1
-    fi
-done
+# for app in xorg-xdpyinfo imagemagick; do
+#     if ! pacman -Qq $app > /dev/null 2>&1; then
+#         dunstify "Missing package" "Please install the $app package to continue" -u critical
+#         exit 1
+#     fi
+# done
 
 # Set some variables
 read -r current_rice < "$HOME"/.config/bspwm/.rice
