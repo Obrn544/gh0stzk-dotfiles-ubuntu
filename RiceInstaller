@@ -233,7 +233,7 @@ printf "Cloning plugin from %s\n" "$repo_url"
 git clone "$repo_url"
 sleep 2
 
-repo_url="git clone https://github.com/zsh-users/zsh-history-substring-search"
+repo_url="https://github.com/zsh-users/zsh-history-substring-search"
 
 printf "Cloning plugin from %s\n" "$repo_url"
 git clone "$repo_url"

@@ -142,4 +142,3 @@ alias ll='eza --icons=always --color=always -la'
 #  ┴ ┴└─┘ ┴ └─┘  └─┘ ┴ ┴ ┴┴└─ ┴ 
 
 pokemon-colorscripts -r --no-title
-$HOME/.local/bin/colorscript -r
