@@ -36,7 +36,7 @@ print_updates() {
 }
 
 update_system() {
-    paru -Syu --nocombinedupgrade
+    sudo apt update
 }
 
 case "$1" in

@@ -442,6 +442,16 @@ git clone https://github.com/Obrn544/gh0stzk-dotfiles-ubuntu.git
 cd gh0stzk-dotfiles-ubuntu
 ```
 
+- **Move RiceInstaller to HOME**
+```sh
+ mv RiceInstaller $HOME
+```
+
+- **cd into HOME**
+```sh
+cd
+```
+
 - **Now give it execute permissions**
 ```sh
 chmod +x RiceInstaller
