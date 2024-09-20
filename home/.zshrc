@@ -103,9 +103,9 @@ command_not_found_handler() {
 #  ┌─┐┬  ┬ ┬┌─┐┬┌┐┌┌─┐
 #  ├─┘│  │ ││ ┬││││└─┐
 #  ┴  ┴─┘└─┘└─┘┴┘└┘└─┘
-source $HOME/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
