@@ -222,7 +222,7 @@ sleep 5
 logo "Download zsh plugins"
 
 repo_url="https://github.com/zsh-users/zsh-autosuggestions"
-repo_dir="$HOME/.config/zsh"
+repo_dir="$HOME/zsh/"
 
 printf "Cloning plugin from %s\n" "$repo_url"
 git clone "$repo_url" "$repo_dir"
@@ -247,12 +247,12 @@ clear
 logo "Download pokemon-colorscripts"
 
 repo_url="https://gitlab.com/phoneybadger/pokemon-colorscripts.git"
-repo_dir="$HOME/Documents"
+repo_dir="$HOME/"
 
 git clone "$repo_url" "$repo_dir"
 sleep 10
 
-cd Documents/pokemon-colorscripts
+cd pokemon-colorscripts
 sudo ./install.sh
 
 cd
