@@ -282,6 +282,8 @@ else
 	fi
 fi
 
+cp -f "$HOME" /gh0stzk-dotfiles-ubuntu/home/.zshrc "$HOME"
+
 ########## ---------- Enabling MPD service ---------- ##########
 
 logo "Enabling mpd service"
