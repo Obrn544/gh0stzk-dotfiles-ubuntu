@@ -196,7 +196,7 @@ for dirs in ~/gh0stzk-dotfiles-ubuntu/config/*; do
     fi
 done
 
-for folder in applications asciiart fonts; do
+for folder in applications fonts; do
     if cp -R ~/gh0stzk-dotfiles-ubuntu/misc/$folder ~/.local/share/ 2>> RiceError.log; then
         printf "%s%s%s %sfolder copied succesfully!%s\n" "${BLD}" "${CYE}" "$folder" "${CGR}" "${CNC}"
         sleep 1
@@ -282,8 +282,6 @@ else
 	fi
 fi
 
-cp -f "$HOME" /gh0stzk-dotfiles-ubuntu/home/.zshrc "$HOME"
-
 ########## ---------- Enabling MPD service ---------- ##########
 
 logo "Enabling mpd service"
@@ -304,6 +302,8 @@ sleep 2
 ########## --------- Changing shell to zsh ---------- ##########
 
 logo "Changing default shell to zsh"
+
+cp -f "$HOME"/gh0stzk-dotfiles-ubuntu/home/.zshrc "$HOME"
 
 if [[ $SHELL != "/usr/bin/zsh" ]]; then
     printf "\n%s%sChanging your shell to zsh. Your root password is needed.%s\n\n" "${BLD}" "${CYE}" "${CNC}"
